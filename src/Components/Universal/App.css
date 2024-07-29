@@ -1,0 +1,265 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  scroll-behavior: smooth;
+  
+  
+}
+
+body > #root > div {
+  height: 100vh;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+#GraphContainer{
+  width: 500px;
+  float: right;
+  margin-right: 100px;
+}
+
+#BioCard{
+  
+}
+#textwindow {
+  width: 80vw;
+  height: 300px;
+  border: 5px solid none;
+  border-radius: 20px;
+  display: flexbox;
+  justify-content: left;
+  align-items: start;
+  padding: 10px;
+  overflow: hidden;
+}
+.typed {
+  color: rgb(var(--mdui-color-on-surface-variant));
+  font-family: "Space Mono";
+  font-size: large;
+}
+.untyped {
+  color: var(--gray);
+  font-family: "Space Mono";
+  font-size: large;
+}
+.wrong {
+  color: var(--md-sys-color-error);
+  font-family: "Space Mono";
+  font-size: large;
+}
+.unknown {
+  color: rgb(var(--mdui-color-primary));
+  font-family: "Space Mono";
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: large;
+}
+.buttongraphdiv {
+  width: fit-content;
+}
+
+.graphcontainer {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: var(--md-sys-color-surface-container-low);
+  transform: translateX(-20%);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.5s cubic-bezier();
+}
+#recordsGraphContainer{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: var(--md-sys-color-surface-container-low);
+  transform: translateX(-20%);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.5s cubic-bezier();
+}
+.buttongraphdiv:hover .graphcontainer {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.TitleText{
+  font-size: small;
+}
+.ValueText{
+  color: rgb(var(--mdui-color-primary));
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.TitleValuePair{
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#ResultsCard{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-tracks: space-around;
+}
+
+
+
+#BioCard{
+  width: 80vw;
+  height: 150px;
+  border: 5px solid none;
+  border-radius: 20px;
+  display: flexbox;
+  justify-content: left;
+  align-items: start;
+  padding: 10px;
+  overflow: hidden;
+}
+#RecordsGraphContainer{
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  background-color: var(--md-sys-color-surface-container-low);
+  transform: translateX(-20%);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.5s cubic-bezier();
+}
+
+#homecontainer{
+  width: 80vw;
+  height: 70vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#clockCard{
+  width: 250px;
+  height: 250px;
+}
+
+#sliderCard{
+  width: 600px;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 20px;
+  margin-right: 50px;
+}
+
+#timerCard{
+  width: 250px;
+  height: 250px;
+}
+
+#lastTestCard{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  align-content: space-between;
+  width: 600px;
+  height: 250px;
+  margin-right: 50px;
+  flex-direction: row;
+}
+
+#clockElement{
+  margin: 0;
+  font-size: xxx-large;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 250px;  
+}
+
+#settingsContainer{
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  height: auto;
+}
+
+#settingsContainer > * {
+  width: 80vw;
+  flex-shrink: 0;
+}
+
+#imagepicker{
+  background-color: rgb(var(--mdui-color-on-surface-variant));
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  background-color: rgb(var(--mdui-color-primary));
+  color: rgb(var(--mdui-color-on-primary));
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid none;
+  border-radius: 30px;
+  padding: 6px 12px;
+  padding-top: 10px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.SettingPair{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#profileModeContainer{
+  display: block;
+}
